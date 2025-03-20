@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Marvel Superheroes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home">
+  <div class="home__container">
+    <ion-list class="home__list">
+      <ion-item 
+        *ngFor="let hero of superheroes"
+        class="home__item"
+        (click)="goToDetail(hero.id)">
+        <ion-thumbnail slot="start" class="home__thumbnail">
+          <img [src]="hero.thumbnail.path + '.' + hero.thumbnail.extension" />
+        </ion-thumbnail>
+        <ion-label class="home__name">{{ hero.name }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

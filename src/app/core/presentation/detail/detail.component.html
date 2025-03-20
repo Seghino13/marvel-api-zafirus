@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ hero?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="detail">
+  <div class="detail__container">
+    <ion-card class="detail__card">
+      <img [src]="hero?.thumbnail?.path + '.' + hero?.thumbnail?.extension" class="detail__image"/>
+      <ion-card-header>
+        <ion-card-title class="detail__name">{{ hero?.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="detail__info"><strong>Comics:</strong> {{ hero?.comics }}</p>
+        <p class="detail__info"><strong>Series:</strong> {{ hero?.series }}</p>
+        <p class="detail__info"><strong>Stories:</strong> {{ hero?.stories }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
